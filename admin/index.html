@@ -56,12 +56,14 @@
     </div>
 
 
+    <script src="./libs/http.js"></script>
     <script>
         $(function() {
             //一进入到index页面就应该发送ajax请求获取用户 信息
             $.ajax({
                 type: 'get',
-                url: "http://localhost:8080/api/v1/admin/user/info",
+                // url: "http://localhost:8080/api/v1/admin/user/info",
+                url: window.BigNew.user_info,
                 // dataType: 'json' //将返回的json格式的字符串转换成一个对象
                 // 设置请求头，在请求头中带上token
                 // headers: {
