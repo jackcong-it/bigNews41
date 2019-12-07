@@ -77,6 +77,15 @@
             })
 
 
+            //退出处理
+            // 1.获取到退出的元素，注册点击事件
+            // 2.点击这个退出的时候，回到登录页面，将token清除
+            $('.logout').on('click',function() {
+                //清除的token
+                window.localStorage.removeItem('token')
+                //退出当前页面返回到登录页
+                window.location.href = './login.html';
+            })
 
 
 
